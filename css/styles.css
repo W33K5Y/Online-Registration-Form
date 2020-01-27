@@ -8,7 +8,7 @@ body {
 }
 /*Header and first Section*/
 
-h1{
+h1{ 
 	text-align: center;
 	font-size: 1.7em;
 	text-transform: lowercase;
@@ -90,7 +90,7 @@ fieldset {
 }
 
 fieldset:first-of-type {
-	border-bottom: solid black 2px;
+	border-bottom: solid black 1.35px;
 }
 
 legend {
@@ -133,7 +133,7 @@ select[id="state"]
 
 }
 input[id="zip"] {
-	width:150px;
+	width: 50%;
 }
 
 /*Newsletter section */
@@ -145,6 +145,10 @@ input[id="zip"] {
 label[class="form-news"],label[for="other_interests"] {
 	font-weight:400;
 	margin: 5px 0; 
+}
+
+textarea {
+	background-color: linear-gradient();
 }
 
 /*Sign up button*/
@@ -196,9 +200,9 @@ footer {
 	}
 	.form-wrap:not(:nth-child(9)) {
 		flex-direction: row;
-	-ms-align-items: center;
-	align-items: center;
-	justify-content: space-between;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: space-between;
 	}
 	input[type=text],
 	input[type=email],
@@ -213,16 +217,16 @@ footer {
 		flex-grow: 1;
 		background: #efefef;
 	}
+
 	.form-wrap:nth-child(8) {
-		max-width:300px;
+		width:30%;
 
 	}
 	input[id="zip"] {
-		max-width: 150px;
+		width: 50%;
+	
 	}
-	.zip_wrap {
-		max-width: 295px;
-	}
+
 
 
 }
