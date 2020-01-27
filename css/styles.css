@@ -4,8 +4,10 @@
 	box-sizing: border-box;
 }
 body {
-	background: ;
+	background:rgb(245,245,245); ;
 }
+
+
 /*Header and first Section*/
 
 h1{ 
@@ -133,8 +135,7 @@ select[id="state"]
 
 }
 input[id="zip"] {
-	width: 50%;
-}
+	width: 50%}
 
 /*Newsletter section */
 
@@ -148,7 +149,11 @@ label[class="form-news"],label[for="other_interests"] {
 }
 
 textarea {
-	background-color: linear-gradient();
+	background: #efefef;
+	outline-color: #141414;
+	-webkit-transition: prop time;
+	-o-transition: prop time;
+	transition: prop time;
 }
 
 /*Sign up button*/
@@ -198,12 +203,15 @@ footer {
 		width:80%;
 		max-width: 1000px;
 	}
-	.form-wrap:not(:nth-child(9)) {
+	.form-wrap:not(:nth-child(9)){
 		flex-direction: row;
 		-ms-align-items: center;
 		align-items: center;
-		justify-content: space-between;
+		/*justify-content: space-between;*/
+
 	}
+
+
 	input[type=text],
 	input[type=email],
 	input[type=tel],
@@ -218,15 +226,19 @@ footer {
 		background: #efefef;
 	}
 
-	.form-wrap:nth-child(8) {
-		width:30%;
 
+	}
+
+	.form-wrap label {
+		flex-basis: 20%;
+	}
+	.form-wrap input,
+	.form-wrap select {
+		flex-basis: 75%;
 	}
 	input[id="zip"] {
-		width: 50%;
-	
+		max-width: 30%;
 	}
-
 
 
 }
