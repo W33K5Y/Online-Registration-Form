@@ -4,7 +4,8 @@
 	box-sizing: border-box;
 }
 body {
-	background:rgb(245,245,245); ;
+	background:rgb(245,245,245); 
+
 }
 
 
@@ -66,18 +67,24 @@ section {
 	border-bottom: 1px solid #141414;
 	width: 90%;
 	margin:20px auto;
+	text-align: center;
 }
 
-input::placeholder {
-	text-align: right;
-	font-family: 'Nunito Sans', sans-serif;
-	font-style: italic;
+/*border#2*/
+section:after {
+	content:"";
+	display: block;
+	height: 2px;
+	margin-bottom: 3px;
+	width: 95%;
+	border-bottom: 1.35px solid black;
 }
+
 
 /*Contact Info Section*/
 
 form {
-	width: 90%;
+	width: 100%;
 	margin: 30px auto;
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 300;
@@ -100,6 +107,23 @@ legend {
 	font-weight: 400;
 }
 
+input::placeholder {
+	color: rgba(178, 34, 34, .3);
+	text-align: right;
+	font-family: 'Nunito Sans', sans-serif;
+	font-style: italic;
+	font-size: .9em;
+}
+
+input[placeholder*="Option"]::placeholder, textarea::placeholder {
+	color: #C4CFD4;
+	font-size: .8em;
+}
+
+textarea::placeholder {
+	font-size: 1.725em;
+	font-style: italic;
+}
 
 .form-wrap {
 	display: -webkit-flex;
@@ -130,103 +154,75 @@ select[id="state"]
 	-webkit-box-shadow: 00 0 3px 2px rgba(0, 0, 0, .2);
 	box-shadow: 00 0 3px 2px rgba(0, 0, 0, .2);
 	outline: none;
-	font-size: .8em;
-	color: 
+	font-size: 1em;
+	color: rgba(16, 16, 16, .8);
 
 }
-input[id="zip"] {
-	width: 50%}
 
-/*Newsletter section */
-
-.form-news {
-	padding: 10px 0 ;
+input[type=text]:focus, 
+input[type=email]:focus,
+input[type=tel]:focus,
+select[id="state"]:focus {
+	background: rgba(249, 249, 249, 1.0);
+	color: #141414;
+	transition: 0.75s ease;
 }
 
-label[class="form-news"],label[for="other_interests"] {
-	font-weight:400;
-	margin: 5px 0; 
-}
 
-textarea {
-	background: #efefef;
-	outline-color: #141414;
-	-webkit-transition: prop time;
-	-o-transition: prop time;
-	transition: prop time;
-}
 
-/*Sign up button*/
-.btn {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: center;
-}
+	/*Newsletter section */
 
-button[type="submit"] {
-	padding:20px 30px;
-	font-size: 1.4em;
-	-ms-align-self: center;
-	align-self: center;
-	background: #141414;
-	color: #efefef;	
-	border-radius: 20px;
-	width: 300px;
-	font-family: 'Barlow Condensed', sans-serif;
-	font-weight: 400;
-	letter-spacing: .1em;
-	-webkit-box-shadow: 00 0 6px 2px rgba(0, 0, 0, .5);
-	box-shadow: 00 0 6px 2px rgba(0, 0, 0, .5);
-	outline: none;
-}
-
-button[type="submit"]:active {
-	letter-spacing: 0;
-}
-/*footer*/
-
-footer {
-	text-align: center;
-}
-
-/*media quieries*/
-
-@media(min-width:768px) {
-
-	form  {
-		max-width: 800px;
-	}
-	section {
-		width:80%;
-		max-width: 1000px;
-	}
-	.form-wrap:not(:nth-child(9)){
-		flex-direction: row;
-		-ms-align-items: center;
-		align-items: center;
-		/*justify-content: space-between;*/
-
+	.form-news {
+		padding: 10px 0 ;
 	}
 
+	label[class="form-news"],label[for="other_interests"] {
+		font-weight:400;
+		margin: 5px 0; 
+	}
 
-	input[type=text],
-	input[type=email],
-	input[type=tel],
-	select[id="state"]
-	{
-		max-width: 80%;
-		height: 3em;
-		padding: 10px 0;
-		margin: 10px;
-		border-radius: 5px;
-		flex-grow: 1;
+	textarea {
 		background: #efefef;
+		outline-color: rgba(20, 20, 20, .1);
+		-webkit-transition: prop time;
+		-o-transition: prop time;
+		transition: prop time;
 	}
 
+	/*Sign up button*/
+	.btn {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+	}
 
+	button[type="submit"] {
+		padding:20px 30px;
+		font-size: 1.4em;
+		-ms-align-self: center;
+		align-self: center;
+		background: #141414;
+		color: #efefef;	
+		border-radius: 20px;
+		width: 300px;
+		font-family: 'Barlow Condensed', sans-serif;
+		font-weight: 400;
+		letter-spacing: .1em;
+		-webkit-box-shadow: 00 0 6px 2px rgba(0, 0, 0, .5);
+		box-shadow: 00 0 6px 2px rgba(0, 0, 0, .5);
+		outline: none;
+	}
+
+	button[type="submit"]:active {
+		letter-spacing: 0;
+	}
+	/*footer*/
+
+	footer {
+		text-align: center;
 	}
 
 	.form-wrap label {
@@ -241,7 +237,46 @@ footer {
 	}
 
 
-}
+	/*media quieries*/
+
+	@media(min-width:768px) {
+
+		form  {
+			max-width: 800px;
+		}
+		section {
+			width:80%;
+			max-width: 1000px;
+		}
+		.form-wrap:not(:nth-child(9)){
+			flex-direction: row;
+			-ms-align-items: center;
+			align-items: center;
+			/*justify-content: space-between;*/
+
+		}
+
+
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		select[id="state"]
+		{
+			max-width: 80%;
+			height: 3em;
+			padding: 10px 0;
+			margin: 10px;
+			border-radius: 5px;
+			flex-grow: 1;
+			background: #efefef;
+		}
+
+		input[id="zip"] {
+			max-width: 30%;
+		}
+
+	}
+
 
 
 
