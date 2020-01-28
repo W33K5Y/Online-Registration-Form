@@ -199,9 +199,7 @@ select[id="state"]:focus {
 	textarea {
 		background: #efefef;
 		outline-color: rgba(20, 20, 20, .1);
-		-webkit-transition: prop time;
-		-o-transition: prop time;
-		transition: prop time;
+		transition: background 0.75s ease;
 	}
 
 	/*Sign up button*/
