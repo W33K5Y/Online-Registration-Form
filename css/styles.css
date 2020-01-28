@@ -159,6 +159,17 @@ select[id="state"]
 
 }
 
+	.form-wrap label {
+		flex-basis: 20%;
+	}
+	.form-wrap input,
+	.form-wrap select {
+		flex-basis: 75%;
+	}
+	input[id="zip"] {
+		max-width: 30%;
+	}
+
 input[type=text]:focus, 
 input[type=email]:focus,
 input[type=tel]:focus,
@@ -168,6 +179,10 @@ select[id="state"]:focus {
 	transition: 0.75s ease;
 }
 
+/*input[type="radio"]:checked {
+	 box-shadow: 0 0 0 3px #141414;
+	 border-radius: 80%;
+}*/
 
 
 	/*Newsletter section */
@@ -219,22 +234,14 @@ select[id="state"]:focus {
 	button[type="submit"]:active {
 		letter-spacing: 0;
 	}
+
 	/*footer*/
 
 	footer {
 		text-align: center;
+		margin-top: 45px;
 	}
 
-	.form-wrap label {
-		flex-basis: 20%;
-	}
-	.form-wrap input,
-	.form-wrap select {
-		flex-basis: 75%;
-	}
-	input[id="zip"] {
-		max-width: 30%;
-	}
 
 
 	/*media quieries*/
